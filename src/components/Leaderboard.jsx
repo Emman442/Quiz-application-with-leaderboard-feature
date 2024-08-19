@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { CubeSpinner } from "react-spinners-kit";
 import { MdLeaderboard } from "react-icons/md";
-import { AdminContext } from "../contexts/authContext";
+import { AdminContext } from "../contexts/AuthContext";
 
 export default function Leaderboard({ setOpenLeaderboard }) {
   const { profile } = useContext(AdminContext);
