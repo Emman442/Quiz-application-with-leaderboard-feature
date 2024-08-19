@@ -303,7 +303,7 @@ table{
     color: var(--color-light);
     background-color: var(--color-darkest);
     width: 100%;
-    overflow-x: hidden;
+    
 
   }
 
