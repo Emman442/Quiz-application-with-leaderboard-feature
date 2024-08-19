@@ -47,7 +47,7 @@ export default function App() {
           style: {
             fontFamily: "Outfit",
             fontWeight: "400",
-            fontSize: "13.5px",
+            fontSize: "18px",
             maxWidth: "460px",
             padding: "12px 16px",
             backgroundColor: "#F2FFF5",

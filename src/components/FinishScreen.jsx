@@ -29,14 +29,14 @@ function FinishScreen() {
       <p className="highscore">(Highscore: {highscore} points)</p>
       <div className="mobile-style">
         <button
-          className="btn btn-ui"
+          className="btn btn-ui option-text"
           onClick={() => dispatch({ type: "restart" })}
         >
           Restart quiz
         </button>
         <button
           onClick={() => setOpenLeaderboard(true)}
-          className="block font-semibold px-[1.2rem] hover:border-[2px] hover:bg-transparent  hover:text-white hover:border-[#00FF89] transition-[0.3s] rounded-[100px] py-[1.6rem] bg-[#00FF89] text-black text-[20px]"
+          className="block option-text font-semibold px-[1.2rem] hover:border-[2px] hover:bg-transparent  hover:text-white hover:border-[#00FF89] transition-[0.3s] rounded-[100px] py-[1.6rem] bg-[#00FF89] text-black text-[20px]"
         >
           View leaderboard
         </button>
