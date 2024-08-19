@@ -3,6 +3,7 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { SphereSpinner } from 'react-spinners-kit';
 
 
 export default function Login() {
@@ -106,8 +107,11 @@ export default function Login() {
             forgot password?
           </Link>
         </div>
-        <button className="inputs-btn font-medium bg-[#00FF89] text-black h-[45px] text-2xl rounded-[10px] lg:w-[90%] mx-auto block" disabled={loading}>
-          {loading?"Signung uppp!!!": "Sign Up"}
+        <button
+          className="inputs-btn font-medium capitalize bg-[#00FF89] text-black h-[45px] text-2xl rounded-[10px] lg:w-[90%] mx-auto justify-center flex items-center text-2xl"
+          disabled={loading}
+        >
+          {loading ? <SphereSpinner /> : "Login"}
         </button>
         <p className="text-2xl text-center my-4">
           Dont have an account yet?{" "}
