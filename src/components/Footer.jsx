@@ -1,5 +1,5 @@
 function Footer({ children }) {
-  return <footer>{children}</footer>;
+  return <footer className="mobile-footer">{children}</footer>;
 }
 
 export default Footer;

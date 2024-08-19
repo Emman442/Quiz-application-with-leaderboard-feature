@@ -18,22 +18,29 @@ function FinishScreen() {
 
   return (
     <>
-    {openLeaderboard && <Leaderboard setOpenLeaderboard={setOpenLeaderboard}/>}
-    
+      {openLeaderboard && (
+        <Leaderboard setOpenLeaderboard={setOpenLeaderboard} />
+      )}
+
       <p className="result" style={{ color: "black" }}>
         <span>{emoji}</span> You scored <strong>{points}</strong> out of{" "}
         {maxPossiblePoints} ({Math.ceil(percentage)}%)
       </p>
       <p className="highscore">(Highscore: {highscore} points)</p>
-      <button
-        className="btn btn-ui"
-        onClick={() => dispatch({ type: "restart" })}
-      >
-        Restart quiz
-      </button>
-      <button onClick={setOpenLeaderboard(true)} className="block px-[1.2rem] text-[2rem] hover:border-[2px] hover:bg-transparent  hover:text-white hover:border-[#00FF89] transition-[0.3s] rounded-[100px] py-[2rem] bg-[#00FF89] text-black">
-        View leaderboard
-      </button>
+      <div className="mobile-style">
+        <button
+          className="btn btn-ui"
+          onClick={() => dispatch({ type: "restart" })}
+        >
+          Restart quiz
+        </button>
+        <button
+          onClick={() => setOpenLeaderboard(true)}
+          className="block font-semibold px-[1.2rem] hover:border-[2px] hover:bg-transparent  hover:text-white hover:border-[#00FF89] transition-[0.3s] rounded-[100px] py-[1.6rem] bg-[#00FF89] text-black text-[20px]"
+        >
+          View leaderboard
+        </button>
+      </div>
     </>
   );
 }

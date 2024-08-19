@@ -53,7 +53,7 @@ export default function Login() {
             localStorage.setItem("token", jsonString);
             toast.success("Login Succcessful")
             navigate("/quiz")
-          }else{
+          }else{  
             toast.error(data?.message)
           }
         } catch (error) {
@@ -63,7 +63,7 @@ export default function Login() {
     }
 
   return (
-    <div className="sm:w-full rounded-[10px] lg:w-[40%] mx-auto shadow-lg h-[80vh] bg-[#2A303C]">
+    <div className="login  rounded-[10px] lg:w-[40%] mx-auto shadow-lg h-[80vh] bg-[#2A303C]">
       <div className="rounded-[7px] pt-5">
         <img
           src="https://media.dscvr.one/fetch?fit=scale-down&height=148&media=https%3A%2F%2Fipfs.dscvr.one%2Fb2801e07-5fcb-486b-8149-9ee1b66f840b-bucket%2Fl5u7qro5crij96sxkkn.jpeg&width=148"
@@ -73,7 +73,7 @@ export default function Login() {
       </div>
       <h1 className="text-center text-[2.8rem] mt-5 mb-0">Log in</h1>
       <form action="" onSubmit={handleSubmit}>
-        <div className="lg:w-[90%] mt-2 mb-8 mx-auto block">
+        <div className="lg:w-[90%] mt-2 mb-8 mx-auto block inputs">
           <p className="ml-2 my-2.5 text-2xl font-medium">Email: </p>
           <input
             type="email"
@@ -83,10 +83,10 @@ export default function Login() {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className="bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
+            className="input-field bg-inherit text-xl pl-3 border-[#434955] border-[2px] w-full border-opacity-40 h-[45px] rounded-[10px] "
           />
         </div>
-        <div className="lg:w-[90%] my-8 mx-auto block">
+        <div className="lg:w-[90%] my-8 mx-auto block inputs">
           <p className="ml-2 my-2.5 text-2xl font-medium">Password: </p>
           <input
             type="password"
@@ -96,7 +96,7 @@ export default function Login() {
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-            className="bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
+            className="input-field bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
           />
           <Link
             to={"/forgot-password"}
@@ -106,7 +106,7 @@ export default function Login() {
             forgot password?
           </Link>
         </div>
-        <button className="font-medium bg-[#00FF89] text-black h-[45px] text-2xl rounded-[10px] lg:w-[90%] mx-auto block" disabled={loading}>
+        <button className="inputs-btn font-medium bg-[#00FF89] text-black h-[45px] text-2xl rounded-[10px] lg:w-[90%] mx-auto block" disabled={loading}>
           {loading?"Signung uppp!!!": "Sign Up"}
         </button>
         <p className="text-2xl text-center my-4">

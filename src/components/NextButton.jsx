@@ -1,7 +1,34 @@
+import toast from "react-hot-toast";
 import { useQuiz } from "../contexts/QuizContext";
 
 function NextButton() {
-  const { dispatch, answer, index, numQuestions } = useQuiz();
+  const updateScore = async () => {
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/user/update-score`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${JSON.parse(localStorage.getItem("token")).token}`,
+          },
+          body: JSON.stringify({
+            scorePoints: points,
+          }),
+        }
+      );
+      if (res.ok) {
+        toast.success(
+          "Your score has been uplaoded succcessfully, you can proceed to view leaderboard"
+        );
+      }
+    } catch (error) {
+      toast.error(
+        error.message || "something happened please try again later!"
+      );
+    }
+  };
+  const { dispatch, points, answer, index, numQuestions } = useQuiz();
 
   if (answer === null) return null;
 
@@ -19,7 +46,10 @@ function NextButton() {
     return (
       <button
         className="btn btn-ui"
-        onClick={() => dispatch({ type: "finish" })}
+        onClick={() => {
+          dispatch({ type: "finish" });
+          updateScore();
+        }}
       >
         Finish
       </button>

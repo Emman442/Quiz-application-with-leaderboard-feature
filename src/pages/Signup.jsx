@@ -22,8 +22,8 @@ export default function Signup() {
       </div>
       <h1 className="text-center text-[2.8rem] mt-5 mb-0">Sign up</h1>
       <form action="" onSubmit={handleSubmit}>
-        <div className="lg:w-[90%] mt-2 mb-8 mx-auto block">
-          <p className="ml-2 my-2.5 text-2xl font-medium">Email: </p>
+        <div className="lg:w-[90%] mt-2 mb-8 mx-auto block inputs">
+          <p className="ml-2 my-2.5 text-2xl font-medium">Name: </p>
           <input
             type="text"
             name=""
@@ -33,11 +33,11 @@ export default function Signup() {
             onChange={(e) => {
               setFullName(e.target.value);
             }}
-            className=" outline-none bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
+            className="input-field outline-none bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
           />
         </div>
-        <div className="lg:w-[90%] mt-2 mb-8 mx-auto block">
-          <p className="ml-2 my-2.5 text-2xl font-medium">Email: </p>
+        <div className="lg:w-[90%] mt-2 mb-8 mx-auto block inputs">
+          <p className="ml-2 my-2.5 text-2xl font-medium ">Email: </p>
           <input
             type="email"
             name=""
@@ -46,10 +46,10 @@ export default function Signup() {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className="outline-none bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
+            className="input-field outline-none bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
           />
         </div>
-        <div className="lg:w-[90%] my-8 mx-auto block">
+        <div className="lg:w-[90%] my-8 mx-auto block inputs">
           <p className="ml-2 my-2.5 text-2xl font-medium">Password: </p>
           <input
             type="password"
@@ -59,11 +59,10 @@ export default function Signup() {
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-            className="outline-none bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
+            className="input-field outline-none bg-inherit text-xl pl-3 border-[#434955] border-[2px] sm:w-full lg:w-full border-opacity-40 h-[45px] rounded-[10px] "
           />
-          
         </div>
-        <button className="font-medium bg-[#00FF89] text-black h-[45px] text-2xl rounded-[10px] lg:w-[90%] mx-auto block">
+        <button className="inputs-btn font-medium bg-[#00FF89] text-black h-[45px] text-2xl rounded-[10px] lg:w-[90%] mx-auto block">
           Sign Up
         </button>
         <p className="text-2xl text-center my-4">

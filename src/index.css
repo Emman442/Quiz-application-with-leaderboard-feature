@@ -268,13 +268,13 @@ progress {
   font-size: inherit;
   padding: 0.8rem;
 }
+
 .scrollbar::-webkit-scrollbar {
   width: 10px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  @apply bg-slate-500 px-5 rounded-full 
-  
+  @apply bg-slate-500 px-5 rounded-full
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
@@ -287,8 +287,148 @@ progress {
   scrollbar-width: none;
   /* Firefox */
 }
+table{
 
+  -webkit-border-vertical-spacing: 0px;
+
+}
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari and Opera */
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    min-height: 100vh;
+    color: var(--color-light);
+    background-color: var(--color-darkest);
+    width: 100%;
+    overflow-x: hidden;
+
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .app-header {
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .progress {
+    width: 75%;
+    display: grid;
+    justify-content: space-between;
+    gap: 1.2rem;
+    grid-template-columns: auto auto;
+    font-size: 1.8rem;
+    margin: 0 auto 4rem auto;
+    color: var(--color-medium);
+  }
+
+  .error {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 2.3rem;
+    background-color: #495057;
+    border-radius: 100px;
+  }
+
+  .question {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .login{
+    width: 100%;
+    
+  }
+  .inputs{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .input-field{
+    width: 100%;
+    
+  }
+  .inputs-btn{
+    width: 90%;
+    margin-top: 30px;
+  }
+  .answer {
+    transform: translateX(1.5rem);
+  }
+
+  .mobile-footer {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .progress {
+    margin-bottom: 2rem;
+  }
+
+  .result {
+    width: 75%;
+    margin: 0 auto;
+    background-color: var(--color-theme);
+    color: var(--color-light);
+    border-radius: 100px;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+  }
+
+  .result span {
+    font-size: 2.2rem;
+    margin-right: 4px;
+  }
+  .mobile-style{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .leaderboard{
+    height: 100%;
+  }
+  .leaderboard-p{
+    font-size: 23px;
+  }
+  td{
+  
+    -webkit-border-vertical-spacing:0px;
+    
+  }
 }

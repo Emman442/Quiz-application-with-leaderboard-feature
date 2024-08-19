@@ -20,7 +20,9 @@ export default function Quiz() {
 
       <Main>
         {status === "loading" && <Loader />}
-        {status === "error" && <Error />}
+        {status === "error" && (
+          <Error message="There was an error fecthing questions" />
+        )}
         {status === "ready" && <StartScreen />}
         {status === "active" && (
           <>
