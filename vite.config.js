@@ -10,9 +10,9 @@ export default defineConfig({
     headers: {
       "Content-Security-Policy": `
       default-src 'self'; 
-      connect-src 'self' https://quiz-app-backend-cy25.onrender.com http://localhost:* https://*.dial.to https://proxy.dial.to; 
+      connect-src 'self' http://localhost:* https://*.dial.to https://proxy.dial.to; 
       img-src 'self' https://media.dscvr.one https://*.dial.to https://proxy.dial.to; 
-      script-src 'self'; 
+      script-src 'self'  https://quiz-app-backend-cy25.onrender.com; 
       style-src 'self' 'unsafe-inline';
     `
         .replace(/\s{2,}/g, " ")
