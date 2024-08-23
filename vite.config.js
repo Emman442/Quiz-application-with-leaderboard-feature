@@ -12,7 +12,7 @@ export default defineConfig({
       default-src 'self'; 
       connect-src 'self' https://quiz-app-backend-cy25.onrender.com http://localhost:* https://*.dial.to https://proxy.dial.to; 
       img-src 'self' https://media.dscvr.one https://*.dial.to https://proxy.dial.to; 
-      script-src 'self' https://xxxx 'unsafe-inline' 'unsafe-eval';
+      script-src 'self'; 
       style-src 'self' 'unsafe-inline';
     `
         .replace(/\s{2,}/g, " ")
