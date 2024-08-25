@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     hmr: false, // Disable HMR to avoid inline script injection
     headers: {
-      'Content-Security-Policy': "connect-src 'self' https://api.dscvr.one https://api1.stg.dscvr.one https://*.helius-rpc.com https://quiz-app-backend-cy25.onrender.com/*/*/*/*"
+      'Content-Security-Policy': "connect-src 'self' https://api.dscvr.one https://api1.stg.dscvr.one https://*.helius-rpc.com https://quiz-app-backend-cy25.onrender.com/api/v1/user/signup "
     }
   
 });
