@@ -8,7 +8,7 @@ export default defineConfig({
 
   server: {
     headers: {
-      'Content-Security-Policy': "connect-src 'self' https://api.dscvr.one https://api1.stg.dscvr.one https://*.helius-rpc.com https://quiz-app-backend-cy25.onrender.com/api/v1/*/* https://quiz-app-backend-cy25.onrender.com/api/v1/user/signup"
+      'Content-Security-Policy': "connect-src 'self' https://api.dscvr.one https://api1.stg.dscvr.one https://*.helius-rpc.com https://quiz-app-backend-cy25.onrender.com"
     }
   }
 });
