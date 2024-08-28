@@ -46,7 +46,7 @@ export default function App() {
             },
           },
           style: {
-            fontFamily: "Outfit",
+            fontFamily: "Ouicksand",
             fontWeight: "400",
             fontSize: "18px",
             maxWidth: "460px",
