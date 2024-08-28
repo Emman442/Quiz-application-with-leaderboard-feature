@@ -2,7 +2,7 @@ function Header() {
   return (
     <header className="app-header">
       <img
-        src="https://cryptologos.cc/logos/solana-sol-logo.png?v=033"
+        src="/Solana.svg"
         style={{
           borderRadius: "7px",
           width: "110",

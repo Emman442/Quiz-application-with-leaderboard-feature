@@ -68,7 +68,7 @@ export default function Login() {
       <div className="login rounded-[10px] lg:w-[40%] w-full mx-auto shadow-lg h-auto bg-[#2A303C] p-12">
         <div className="rounded-[7px] pt-5">
           <img
-            src="https://cryptologos.cc/logos/solana-sol-logo.png?v=033"
+            src="/Solana.svg"
             className="mx-auto w-[90px] h-[90px] rounded-[7px]"
             alt=""
           />
