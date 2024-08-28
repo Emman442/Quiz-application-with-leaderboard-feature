@@ -5,7 +5,7 @@
             "headers": [
                 {
                     "key": "Content-Security-Policy",
-                    "value": "connect-src https://quiz-app-backend-cy25.onrender.com https://res.cloudinary.com/dighewixb/image/upload/v1724104832/Screenshot_426_mt3vb8.png"
+                    "value": "connect-src https://quiz-app-backend-cy25.onrender.com https://cryptologos.cc/logos/solana-sol-logo.png?v=033"
                 }
             ]
         }

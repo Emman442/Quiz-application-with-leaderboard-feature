@@ -68,7 +68,7 @@ export default function Login() {
       <div className="login rounded-[10px] lg:w-[40%] w-full mx-auto shadow-lg h-auto bg-[#2A303C] p-12">
         <div className="rounded-[7px] pt-5">
           <img
-            src="https://media.dscvr.one/fetch?fit=scale-down&height=148&media=https%3A%2F%2Fipfs.dscvr.one%2Fb2801e07-5fcb-486b-8149-9ee1b66f840b-bucket%2Fl5u7qro5crij96sxkkn.jpeg&width=148"
+            src="https://cryptologos.cc/logos/solana-sol-logo.png?v=033"
             className="mx-auto w-[90px] h-[90px] rounded-[7px]"
             alt=""
           />
