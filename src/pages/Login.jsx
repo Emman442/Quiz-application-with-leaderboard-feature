@@ -54,9 +54,11 @@ export default function Login() {
             toast.success("Login Succcessful")
             navigate("/quiz")
           }else{  
+            setLoading(false)
             toast.error(data?.message)
           }
         } catch (error) {
+          setLoading(false)
           console.log("catched Error: ", error)
           toast.error(error?.message)
         }
