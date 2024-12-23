@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { SphereSpinner } from "react-spinners-kit";
 
-
+//i0xpHro29FivIn2b
 export default function Signup() {
   const navigate = useNavigate()
   const [error, setError] = useState("")

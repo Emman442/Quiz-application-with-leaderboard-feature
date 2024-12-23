@@ -23,7 +23,6 @@ export default function Login() {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                // Authorization: "", // Add a token if needed or leave it blank if not required
               },
               body: JSON.stringify({
                 email,
