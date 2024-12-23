@@ -18,11 +18,7 @@ export default function Leaderboard({ setOpenLeaderboard }) {
       try {
         setLoading(true);
         const res = await fetch(
-          `${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/user/all-users`,
-          {
-            method: "GET",
-          }
-        );
+          `${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/user/all-users`);
         if (!res.ok) {
           throw new Error(data.message || "Failed to fetch champions");
         }
