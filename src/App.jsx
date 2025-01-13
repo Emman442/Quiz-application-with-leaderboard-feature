@@ -6,13 +6,31 @@ import { Toaster } from "react-hot-toast";
 import Protected from "./pages/Protected";
 import Quiz from './components/Quiz'
 import Leaderboard from "./components/Leaderboard";
-import { CivicAuthProvider, useUser } from "@civic/auth/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { WagmiProvider, createConfig, useAccount, useConnect, useBalance, http } from 'wagmi';
+import { embeddedWallet, userHasWallet } from '@civic/auth-web3';
+import { CivicAuthProvider, UserButton, useUser } from '@civic/auth-web3/react';
+import { mainnet, sepolia } from "wagmi/chains";
+
+const wagmiConfig = createConfig({
+  chains: [ mainnet, sepolia ],
+  transports: {
+    [mainnet.id]: http(),
+    [sepolia.id]: http(),
+  },
+  connectors: [
+    embeddedWallet(),
+  ],
+});
 
 
 export default function App() {
+  const queryClient = new QueryClient();
   const user = useUser(); 
   console.log("userrrr: ",user)
   return (
+    <QueryClientProvider client={queryClient}>
+      <WagmiProvider config={wagmiConfig}>
     <CivicAuthProvider clientId="fdb26ff7-d890-4fa2-bedb-773607398045">
     <BrowserRouter>
     
@@ -66,5 +84,7 @@ export default function App() {
       
     </BrowserRouter>
    </CivicAuthProvider>
+   </WagmiProvider>
+    </QueryClientProvider>
   );
 }

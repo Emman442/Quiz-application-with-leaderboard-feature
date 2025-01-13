@@ -3,10 +3,19 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { SphereSpinner } from "react-spinners-kit";
-import { UserButton, CivicAuthProvider, useUser } from "@civic/auth/react";
 
-export default function Login() {
-  const user = useUser();
+import { userHasWallet } from "@civic/auth-web3";
+import { useUser, UserButton } from '@civic/auth-web3/react';
+
+export default async function Login() {
+
+  const userContext = await useUser();
+ 
+  if (userContext.user && !userHasWallet(userContext)) {
+    await userContext.createWallet();
+  }
+  
+
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
