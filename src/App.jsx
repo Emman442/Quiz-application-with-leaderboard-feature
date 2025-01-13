@@ -1,18 +1,25 @@
 
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { Toaster } from "react-hot-toast";
 import Protected from "./pages/Protected";
 import Quiz from './components/Quiz'
 import Leaderboard from "./components/Leaderboard";
+import { CivicAuthProvider, useUser } from "@civic/auth/react";
+
 
 export default function App() {
-
+  const user = useUser(); 
+  console.log("userrrr: ",user)
   return (
+    <CivicAuthProvider clientId="fdb26ff7-d890-4fa2-bedb-773607398045">
     <BrowserRouter>
+    
+      {/* {children} */}
       <Routes>
-        <Route path="/" element={<Navigate to={"/login"} />}/>
+      <Route path="/" element={<Navigate to={user ? "/quiz" : "/login"} />} />
+      <Route path="/login" element={user ? <Navigate to="/quiz" /> : <Login />} />
         
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
@@ -56,6 +63,8 @@ export default function App() {
           },
         }}
       />
+      
     </BrowserRouter>
+   </CivicAuthProvider>
   );
 }

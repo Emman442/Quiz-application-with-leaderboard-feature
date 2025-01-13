@@ -1,3 +1,5 @@
+import { UserButton } from "@civic/auth/react";
+
 function Header() {
   return (
     <header className="app-header">
@@ -11,6 +13,7 @@ function Header() {
         alt="React logo"
       />
       <h1>The SOLANA Quiz</h1>
+      <UserButton/>
     </header>
   );
 }
