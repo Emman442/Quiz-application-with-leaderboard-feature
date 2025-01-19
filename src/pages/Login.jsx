@@ -7,14 +7,8 @@ import { SphereSpinner } from "react-spinners-kit";
 import { userHasWallet } from "@civic/auth-web3";
 import { useUser, UserButton } from '@civic/auth-web3/react';
 
-export default async function Login() {
+export default function Login() {
 
-  const userContext = await useUser();
- 
-  if (userContext.user && !userHasWallet(userContext)) {
-    await userContext.createWallet();
-  }
-  
 
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
