@@ -1,0 +1,11 @@
+{
+  "name": "Greed Academy Book",
+  "description": "Deploying Greed Book As an NFT",
+  "image": "https://greed.academy/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgreed-book-mockup.67e6b85f.png&w=1920&q=75",
+  "attributes": [
+    {
+      "trait_type": "ease_of_use",
+      "value": 100
+    }
+  ]
+}
