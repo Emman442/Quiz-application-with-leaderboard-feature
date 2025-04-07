@@ -15,8 +15,16 @@
   "dependencies": {
     "@civic/auth": "^0.2.0",
     "@civic/auth-web3": "^0.2.0",
+    "@civic/solana-gateway-react": "^1.2.4",
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@reduxjs/toolkit": "^2.2.7",
+    "@solana/wallet-adapter-base": "^0.9.24",
+    "@solana/wallet-adapter-react": "^0.15.36",
+    "@solana/wallet-adapter-wallets": "^0.19.33",
+    "@solana/web3.js": "^1.98.0",
     "axios": "^1.7.4",
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
     "react": "^18.3.1",
     "react-cookie": "^7.2.0",
     "react-dom": "^18.3.1",
@@ -36,8 +44,11 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "gh-pages": "^6.1.1",
+    "node-polyfill": "^1.0.0",
     "postcss": "^8.4.41",
+    "rollup-plugin-polyfill-node": "^0.13.0",
     "tailwindcss": "^3.4.10",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "vite-plugin-node-polyfills": "^0.23.0"
   }
 }

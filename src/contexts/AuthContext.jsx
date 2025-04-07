@@ -26,13 +26,6 @@ function AdminProvider({ children }) {
     }
   }
 
-  // useEffect(() => {
-    // const storedProfile = JSON.parse(localStorage.getItem("token"));
-    // console.log(storedProfile)
-    // setStoredProfile(storedProfile);
-  //   console.log(localStorage.getItem("token"))
-  // }, []);
-
   useEffect(() => {
     if (storedProfile) {
       setToken(storedProfile?.token);

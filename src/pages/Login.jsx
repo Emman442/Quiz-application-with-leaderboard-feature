@@ -3,13 +3,14 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { SphereSpinner } from "react-spinners-kit";
-
 import { userHasWallet } from "@civic/auth-web3";
 import { useUser, UserButton } from '@civic/auth-web3/react';
+import { useGateway } from "@civic/solana-gateway-react";
 
 export default function Login() {
+const { requestGatewayToken } = useGateway();
 
-
+  
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -114,12 +115,6 @@ export default function Login() {
               {loading ? <SphereSpinner /> : "Login"}
             </button>
 
-            <p>Or Sign in Using Civic</p>
-            <div className="flex items-center justify-center user-btn">
-            <UserButton />
-
-            </div>
-            
             <p className="text-2xl text-center my-4">
               Dont have an account yet?{" "}
               <Link to={"/register"} className="text-[#00FF89] text-center">
@@ -127,6 +122,14 @@ export default function Login() {
               </Link>
             </p>
           </form>
+
+          <hr />
+
+          <p>Or Sign in Using Civic</p>
+          <div className="flex items-center justify-center user-btn">
+            <UserButton />
+            <button onclick={requestGatewayToken}>Civic Pass</button>
+          </div>
         </div>
       </div>
     </>
