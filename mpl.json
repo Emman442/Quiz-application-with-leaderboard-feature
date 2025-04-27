@@ -1,0 +1,21 @@
+{
+  "name": "My NFT Name",
+  "symbol": "NFT",
+  "description": "This is a special NFT for the project!",
+  "seller_fee_basis_points": 500, 
+  "image": "https://i.pinimg.com/736x/d8/b6/3f/d8b63f324018e3e91ba32db692cf8258.jpg",
+  "external_url": "https://your-project-website.com",
+  "attributes": [
+    { "trait_type": "Seat Number", "value": "12A" },
+    { "trait_type": "Flight", "value": "FlySwap 001" }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://your-storage.com/path-to-image.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}
